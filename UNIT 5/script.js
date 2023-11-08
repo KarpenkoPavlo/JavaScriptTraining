@@ -100,9 +100,49 @@ document.querySelector(".b10").onclick = () => {
 
 //task 11
 document.querySelector(".b11").onclick = () => {
-    let div = document.getElementsByTagName("div");
-    for(div[i]=0; div[i]<div.length; div++) {
-        let o11 = document.querySelector(".o11");
-        o11.innerHTML += div[i];
+    let div = document.querySelectorAll(".d11");
+    let o11 = document.querySelector(".o11");
+    let result = [];
+
+    for (let i = 0; i < div.length; i++) {
+        result.push(div[i].textContent);
+    }
+
+    o11.textContent = result.join(" ");
+}
+
+//task 12
+document.querySelector(".b12").onclick = () => {
+    let d12 = document.querySelectorAll(".d12");
+    for(i=0; i<d12.length; i++) {
+        d12[i].style.background = "orange";
+    }
+}
+
+//task 13
+document.querySelector(".b13").onclick = () => {
+    let i13 = document.querySelectorAll(".i13");
+    for(i=0; i<i13.length; i++) {
+        i13[i].value = i + 1;
+    }
+}
+
+//task 14
+document.querySelector(".b14").onclick = () => {
+    let i14 = document.querySelectorAll(".i14");
+    let o14 = document.querySelector(".out14")
+    for(i=0; i<i14.length; i++) {
+        o14.innerHTML += i14[i].value;
+    }
+}
+
+//task 15
+document.querySelector(".b15").onclick = () => {
+    let o15 = document.querySelector(".o15");
+    for(i=10; i>=0; i--) {
+        o15.innerHTML += i + " ";
+        if(i>0) {
+            o15.innerHTML += (10 - i) + " ";
+        }
     }
 }
