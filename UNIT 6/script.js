@@ -53,17 +53,72 @@ for(i=0; i<3; i++) {
     o5.innerHTML += `<br>`;
 }
 
-//task 6 Помилка в коді
-// let o6 = document.querySelector(".o6");
+//task 6
+let o6 = document.querySelector(".o6");
 
-// for(i=0; i<3; i=0) {
-//     for(k=0; k<6; k++) {
-//         if(k%2) {
-//             o6.innerHTML += "0";
-//         } else if(k/3) {
-//             o6.innerHTML += "x";
-//         } else {
-//             o6.innerHTML += "1";
-//         }
-//     }
-// }
+for (let i = 0; i < 3; i++) {
+    for (let k = 0; k < 6; k++) {
+        if (k % 3 === 0) {
+            o6.innerHTML += "1";
+        } else if (k % 3 === 1) {
+            o6.innerHTML += "0";
+        } else {
+            o6.innerHTML += "x";
+        }
+    }
+    o6.innerHTML += "<br>";
+}
+
+//task 7
+let o7 = document.querySelector(".o7");
+
+for(i=0; i<5; i++) {
+    for(k=0; k<i; k++) {
+        o7.innerHTML += "*";
+    }
+    o7.innerHTML += `<br>`;
+}
+
+//task 8
+let o8 = document.querySelector(".o8");
+ for(i=0; i<5; i++) {
+    for(k=4; k>=i; k--) {
+        o8.innerHTML += "*";
+    }
+    o8.innerHTML += `<br>`;
+ }
+
+ //task 9
+ let o9 = document.querySelector(".o9");
+
+ for(i=1; i<7; i++) {
+    for(k=1; k<i; k++) {
+        o9.innerHTML += k + " ";
+    }
+    o9.innerHTML += `<br>`;
+ }
+
+ //task 10
+ let o10 = document.querySelector(".o10");
+
+ for(i=0; i<5; i++) {
+    for(k=1; k<=10; k++) {
+        let num = i * 10 + k;
+        if(num<10) {
+            o10.innerHTML += "0" + num + " ";
+        } else {
+            o10.innerHTML += num + " ";
+        }
+    }
+    o10.innerHTML += `<br>`;
+ }
+
+ //+task 11 -
+let o11 = document.querySelector(".o11");
+
+for(k=0; k<=10; k++) {
+    for(i=0; i<=10; i++) {
+        o11.innerHTML += `1*${i}=${i*1}<br>`;
+    }
+    o11.innerHTML += `<hr>`
+}
