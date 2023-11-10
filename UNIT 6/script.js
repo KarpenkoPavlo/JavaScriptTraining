@@ -113,12 +113,36 @@ let o8 = document.querySelector(".o8");
     o10.innerHTML += `<br>`;
  }
 
- //+task 11 -
+//+Tasks
+
+ //task 11
 let o11 = document.querySelector(".o11");
 
 for(k=0; k<=10; k++) {
     for(i=0; i<=10; i++) {
-        o11.innerHTML += `1*${i}=${i*1}<br>`;
+        o11.innerHTML += `${k}*${i}=${i * k}<br>`;
     }
     o11.innerHTML += `<hr>`
 }
+
+//task 12
+let o12 = document.querySelector(".o12");
+for(i=0; i<3; i++) {
+    for(k=0; k<5; k++) {
+        o12.innerHTML += "*";
+    }
+    o12.innerHTML += `<br>`;
+}
+
+//task 13
+let o13 = document.querySelector(".o13");
+
+for(i=0; i<5; i++) {
+    for(k=i; k<5; k++) {
+        o13.innerHTML += "*";
+    }
+    o13.innerHTML += `<br>`;
+}
+
+//task 14
+let o14 = document.querySelector(".o14");
