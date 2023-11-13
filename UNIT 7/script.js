@@ -1,8 +1,7 @@
 //task 1
 let a1 = 8;
 function f1() {
-    let o1 = document.querySelector(".o1");
-    o1.innerHTML = a1;
+    document.querySelector(".o1").textContent = a1;
 }
 document.querySelector(".b1").onclick = f1;
 
@@ -37,10 +36,12 @@ document.querySelector(".b4").onclick = function() {
 
 //task 5
 function f5(name) {
-    console.log("Hello " + name);
+    return "Hello " + name;
 }
 
-f5("Pavel");
+document.querySelector(".b5").onclick = () => {
+    alert(f5("Pavel"));
+}
 
 //task 6
 function f6(a,b) {
@@ -52,10 +53,10 @@ document.querySelector(".b6").onclick = () => {
 
 //task 7
 function f7() {
-    let x = Math.floor(Math.random() * (255 - 0 + 1));
-    let y = Math.floor(Math.random() * (255 - 0 + 1));
-    let z = Math.floor(Math.random() * (255 - 0 + 1));
-    return `rgb(`+x+`,`+y+`,`+z+`)`;
+    let x = Math.floor(Math.random() * (255));
+    let y = Math.floor(Math.random() * (255));
+    let z = Math.floor(Math.random() * (255));
+    return `rgb(${x}, ${y}, ${z})`;
 }
 document.querySelector(".b7").onclick = function() {
     document.querySelector(".b7").style.backgroundColor = f7();
@@ -67,23 +68,16 @@ function f8(i8) {
 }
 document.querySelector(".b8").onclick = () => {
     let i8 = document.querySelector(".i8").value;
-    let i8Trim = f8(i8);
-    document.querySelector(".i8").value = i8Trim;
+    document.querySelector(".i8").value = f8(i8);
 }
 
 //task 9
 function f9(number) {
-    if(number % 2 == 0) {
-        return "true";
-    } else {
-        return "false";
-    }
+    return (number % 2 == 0) ? "true" : "false";
 }
 document.querySelector(".b9").onclick = () => {
     let i9 = document.querySelector(".i9").value;
-    let o9 = document.querySelector(".o9");
-    let result = f9(parseInt(i9));
-    o9.innerHTML = result;
+    document.querySelector(".o9").innerHTML = f9(i9);
 }
 
 //task 10
