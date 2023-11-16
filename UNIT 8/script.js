@@ -84,3 +84,76 @@ function f7() {
 }
 
 document.querySelector(".b7").onclick = f7;
+
+//task 8
+function f8() {
+    let i81 = document.querySelector(".i81");
+    let i82 = document.querySelector(".i82");
+
+    while(i82.value > i81.value) {
+        document.querySelector(".o8").innerHTML += +i81.value++;
+    }
+}
+
+document.querySelector(".b8").onclick = f8;
+
+//task 9
+function f9() {
+    let i91 = document.querySelector(".i91");
+    let i92 = document.querySelector(".i92");
+    let o9 = document.querySelector(".o9");
+
+    if(i91.value > i92.value) {
+        while(i91.value >= i92.value) {
+            o9.innerHTML += i92.value + " ";
+            i92.value++;
+        }
+    } else {
+        while(i91.value <= i92.value) {
+            o9.innerHTML += i91.value + " ";
+            i91.value++;
+        }
+    }
+}
+
+document.querySelector(".b9").onclick = f9;
+
+//task 10
+function f10() {
+    let i = 1950;
+    while(i <= 2000) {
+        i++;
+        if(i % 2 == 0) {
+            document.querySelector(".o10").innerHTML += i + " ";
+
+        }
+    }
+}
+
+document.querySelector(".b10").onclick = f10;
+
+//task 11
+function f11() {
+    let elements = document.querySelectorAll('.d11');
+    let i = 0;
+    let result = '';
+    while(i < elements.length) {
+        result += elements[i].innerHTML + " ";
+        i++;
+    }
+    document.querySelector(".o11").innerHTML = result.trim();
+}
+
+document.querySelector(".b11").onclick = f11;
+
+//task 12
+function f12() {
+    let elements = document.querySelectorAll(".d12");
+    let i = 0;
+    while(i < elements.length) {
+        elements[i].style.background = 'orange';
+        i++;
+    }
+}
+
+document.querySelector(".b12").onclick = f12;
