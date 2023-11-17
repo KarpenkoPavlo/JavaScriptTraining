@@ -157,3 +157,41 @@ function f12() {
 }
 
 document.querySelector(".b12").onclick = f12;
+
+//task 13
+function f13() {
+    let elements = document.querySelectorAll(".i13");
+    let i = 0;
+    while(i < elements.length) {
+        elements[i].value += i + 1;
+        i++;
+    }
+}
+
+document.querySelector(".b13").onclick = f13;
+
+//task 14
+function f14() {
+    let elements = document.querySelectorAll(".i14");
+    let i = 0;
+    while(i < elements.length) {
+        if(elements[i].checked) {
+            document.querySelector(".o14").innerHTML = elements[i].value;
+            break;
+        }
+        i++;
+    }
+}
+
+document.querySelector(".b14").onclick = f14;
+
+//task 15
+function f15() {
+    let i = 0;
+    let k = 10;
+    while(i <= 10) {
+        document.querySelector(".o15").innerHTML += k-- + " " + i++ + " ";
+    }
+}
+
+document.querySelector(".b15").onclick = f15;
