@@ -1,61 +1,61 @@
- let m1 = 'JoJo';
- let m2 = 'Dio';
- let allAge = 16;
+//  let m1 = 'JoJo';
+//  let m2 = 'Dio';
+//  let allAge = 16;
 
- let arrayJoJo1 = [m1, ,m2, allAge];
- console.log(arrayJoJo1);
- console.log(m1);
- console.log(m2);
- console.log(allAge);
+//  let arrayJoJo1 = [m1, ,m2, allAge];
+//  console.log(arrayJoJo1);
+//  console.log(m1);
+//  console.log(m2);
+//  console.log(allAge);
 
-console.log('Array length: ', arrayJoJo1.length);
+// console.log('Array length: ', arrayJoJo1.length);
 
- //-
+//  //-
 
- let arrayJoJo2 = ['JoJo', 'Dio', 16];
- console.log(arrayJoJo2);
- console.log(arrayJoJo2[0]);
+//  let arrayJoJo2 = ['JoJo', 'Dio', 16];
+//  console.log(arrayJoJo2);
+//  console.log(arrayJoJo2[0]);
 
-arrayJoJo2[1] = 'Vampire';
-console.log(arrayJoJo2);
+// arrayJoJo2[1] = 'Vampire';
+// console.log(arrayJoJo2);
 
-//-
+// //-
 
-let array = [1, 2, 3, 4];
-console.log(array);
+// let array = [1, 2, 3, 4];
+// console.log(array);
 
-let o = array[0]; //Тимчасова змінна
-array[0] = array[ array.length - 1];
-array[ array.length - 1] = o;
-console.log(array);
+// let o = array[0]; //Тимчасова змінна
+// array[0] = array[ array.length - 1];
+// array[ array.length - 1] = o;
+// console.log(array);
 
-let outStr = '';
-for(i=0; i<array.length; i++) {
-    if(array[i] % 2 == 0) {
-        outStr += array[i] + " ";
-    }
-}
+// let outStr = '';
+// for(i=0; i<array.length; i++) {
+//     if(array[i] % 2 == 0) {
+//         outStr += array[i] + " ";
+//     }
+// }
 
-document.querySelector('.oTest1').innerHTML = outStr;
+// document.querySelector('.oTest1').innerHTML = outStr;
 
-// Як знайти максимальне число в масиві?
-let arrayMax = [2, 6, 32, 1, 76, 54, 4, 100];
-let max = arrayMax[0];
-for(i = 0; i<arrayMax.length; i++) {
-    if(arrayMax[i] > max) {
-        max = arrayMax[i];
-}
-}
+// // Як знайти максимальне число в масиві?
+// let arrayMax = [2, 6, 32, 1, 76, 54, 4, 100];
+// let max = arrayMax[0];
+// for(i = 0; i<arrayMax.length; i++) {
+//     if(arrayMax[i] > max) {
+//         max = arrayMax[i];
+// }
+// }
 
-console.log('max: ', max);
+// console.log('max: ', max);
 
-// Як знайти суму елементів в масиві?
-let sum = 0;
-for(i = 0; i<arrayMax.length; i++) {
-    sum = sum + arrayMax[i];
-}
+// // Як знайти суму елементів в масиві?
+// let sum = 0;
+// for(i = 0; i<arrayMax.length; i++) {
+//     sum = sum + arrayMax[i];
+// }
 
-console.log('sum: ', sum);
+// console.log('sum: ', sum);
 
 //tasks
 
@@ -187,3 +187,66 @@ function f10() {
 }
 
 document.querySelector('.b10').onclick = f10;
+
+//task 11
+let ar11 = [2, 3, 4, 5, 6, 7];
+
+function f11() {
+    let i = ar11[2];
+    ar11[2] = ar11[4];
+    ar11[4] = i;
+    document.querySelector('.o11').innerHTML = ar11.join(' ');
+}
+
+document.querySelector('.b11').onclick = f11;
+
+//task 12
+ar12 = ['test', 'west', 'list', 'class', 'best'];
+
+function f12() {
+    let i = ar12[0];
+    ar12[0] = ar12[ar12.length - 1];
+    ar12[ar12.length - 1] = i;
+    document.querySelector('.o12').innerHTML = ar12.join(' ');
+    
+}
+
+document.querySelector(".b12").onclick = f12;
+
+//task 13
+let ar13 = ['test', 'west', 'list', 'class', 'best'];
+
+function f13() {
+    let i = 0;
+    while(i < ar13.length) {
+        let o13 = document.querySelector('.o13');
+        o13.innerHTML += (i + ' ' + ar13[i] + ' ');
+        i++;
+    }
+}
+
+document.querySelector('.b13').onclick = f13;
+
+//task 14
+let ar14 = [1, 2, 3, 'hello', 66];
+
+function f14() {
+    for(i = ar14.length - 1; i >= 0; i--) {
+        document.querySelector('.o14').innerHTML += ar14[i] + ' ';
+    }
+}
+
+document.querySelector('.b14').onclick = f14;
+
+//task 15
+ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+
+function f15() {
+    for(i = 0; i < ar15.length; i++) {
+        if(ar15[i] > 0) {
+            document.querySelector('.o15').innerHTML += ar15[i] + ' ';
+        }
+    }
+}
+
+document.querySelector('.b15').onclick = f15;
