@@ -148,3 +148,79 @@ function f12() {
 }
 
 document.querySelector('.b12').onclick = f12;
+
+//task 13
+d13 = [6, 0, 22, 1, 4, 76]
+
+function f13() {
+    let d132 = [];
+    for(let i = d13.length - 1; i >= 0; i--) {
+        d132.push(d13[i]);
+    }
+    showArr('.o13', d132);
+}
+
+document.querySelector('.b13').onclick = f13;
+
+//task 14
+let d14 = [];
+
+function f14() {
+    let i14 = parseInt(document.querySelector('.i14').value);
+    if(i14 > 0) {
+        d14.length = i14;
+        d14.fill(1);
+    } else {
+        alert('ERROR your number < 0 (-_-)');
+    }
+
+    showArr('.o14', d14);
+}
+
+document.querySelector('.b14').onclick = f14;
+
+//task 15
+let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+
+function f15() {
+    let i15 = parseInt(document.querySelector('.i15').value);
+
+    if(d15.includes(i15)) {
+        alert('Your number is in an d15 :)');
+    } else {
+        d15.push(i15);
+    }
+
+    showArr('.o15', d15);
+}
+
+document.querySelector('.b15').onclick = f15;
+
+//task 16
+let d16 = [];
+let d161 = [5, 6, 7, 8, 9];
+let d162 = [23, 24, 56, 87];
+
+function f16() {
+    d16 = d161.concat(d162);
+    document.querySelector('.o16').innerHTML = d16;
+
+    showArr('.o16', d16);
+}
+
+document.querySelector('.b16').onclick = f16;
+
+//task 17 -
+let d17 = [];
+let d171 = ['a', 'b', 'c', 'd'];
+let d172 = [1, 2, 3, 4, 5];
+
+function f17() {
+    for(i = 0; i < d171.length; i++) {
+        d17 += i;
+    }
+
+    showArr('.o17', d17);
+}
+
+document.querySelector('.b17').onclick = f17;
