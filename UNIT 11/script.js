@@ -217,10 +217,54 @@ let d172 = [1, 2, 3, 4, 5];
 
 function f17() {
     for(i = 0; i < d171.length; i++) {
-        d17 += i;
+        d17.push(d171[i]);
+    }
+    for(k = 0; k < d172.length; k++) {
+        d17.push(d172[k]);
     }
 
     showArr('.o17', d17);
 }
 
 document.querySelector('.b17').onclick = f17;
+
+//task 18
+d18 = ['b', 'c', '45', 'e', 'z', 'y'];
+
+function f18() {
+    let i18 = document.querySelector('.i18').value;
+
+    if(d18.includes(i18)) {
+        document.querySelector('.o18').innerHTML = i18;
+    } else {
+        alert('The array does not contain your value :(');
+    }
+}
+
+document.querySelector('.b18').onclick = f18;
+
+//task 19
+let d19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be', 'charged', 'in', 'advance', 'every'];
+let maxString = '';
+let zero = 0;
+
+function f19() {
+    for(i=0; i<d19.length; i++) {
+        if(d19[i].length > zero) {
+            zero = d19[i].length;
+            maxString = d19[i];
+        }
+    }
+    document.querySelector('.o19').innerHTML = maxString;
+}
+
+document.querySelector('.b19').onclick = f19;
+
+//task 20
+d20 = [4,5,6,7,8,9,10]
+
+function f20() {
+    document.querySelector('.o20').innerHTML = d20.join('')
+}
+
+document.querySelector('.b20').onclick = f20;
