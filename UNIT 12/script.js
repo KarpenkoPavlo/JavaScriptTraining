@@ -132,3 +132,149 @@ function f6() {
 }
 
 document.querySelector('.b6').onclick = f6;
+
+//task 7
+function f7() {
+    let out = '';
+    let a7 = [
+        [1, 2, 3, 9],
+        [3, 4, 7],
+        [5, 6, 8, 32],
+        [21, 34, 43],
+        [44, 56]
+    ];
+
+    for(let i = 0; i < a7.length; i++) {
+        let c = a7[i];
+        for(let k = 0; k < a7[i].length; k++) {
+            if(a7[i][k] % 2 == 0) {
+                out += a7[i][k] + ' ';
+            }
+        }
+    }
+    document.querySelector('.o7').innerHTML = out;
+}
+
+document.querySelector('.b7').onclick = f7;
+
+//task 8
+function f8() {
+    let out = '';
+    let a8 = [
+        [1, 2, 3, 9],
+        [3, 4, 7],
+        [5, 6, 8, 32],
+        [21, 34, 43],
+        [44, 56]
+    ];
+
+    for(let i = 0; i < a8.length; i++) {
+        let c = a8[i];
+        for(let k = 0; k < a8[i].length; k++) {
+            if(a8[i][k] % 3 == 0) {
+                out += a8[i][k] + ' ';
+            }
+        }
+    }
+    document.querySelector('.o8').innerHTML = out;
+
+}
+
+document.querySelector('.b8').onclick = f8;
+
+//task 9
+function f9() {
+    let out = '';
+    let a9 = [
+        [-2, 7, -3],
+        [3, 4, -7],
+        [-5, 6, -8, 32],
+        [21, -34, -43],
+        [44, -56]
+    ];
+
+    for(let i = 0; i < a9.length; i++) {
+        let c = a9[i];
+        for(let k = 0; k < a9[i].length; k++) {
+            if(a9[i][k] > 0) {
+                out += a9[i][k] + ' ';
+            }
+        }
+    }
+    document.querySelector('.o9').innerHTML = out;
+
+}
+
+document.querySelector('.b9').onclick = f9;
+
+//task 10
+function f10() {
+    let out = '';
+    let a10 = [
+        [-2, '7', -3],
+        [3, 4, -7],
+        [-5, 6, -8, 32, 'a'],
+        ['st', 21, -34, -43],
+        [44, -56, 'task']
+    ];
+
+    for(let i = 0; i < a10.length; i++) {
+        for(let k = 0; k < a10[i].length; k++) {
+            if(a10[i][k] !== +a10[i][k]) {
+                out += a10[i][k] + ' ';
+            }
+        }
+    }
+    document.querySelector('.o10').innerHTML = out;
+}
+
+document.querySelector('.b10').onclick = f10;
+
+//task 11
+let a11 = [
+    [4, 5, 6],
+    [7, 8],
+    [9, 10, 11, 12, 13]
+];
+
+function f11() {
+    let out = '';
+
+    for(let i = 0; i < a11.length; i++) {
+        for(let k = a11[i].length - 1; k >= 0; k--) {
+            out += a11[i][k] + ' ';
+        }
+        out += `<br>`;
+    }
+    document.querySelector('.o11').innerHTML = out;
+}
+
+document.querySelector('.b11').onclick = f11;
+
+//task 12
+function f12() {
+    let a12 = [
+        [0,1,0,1,0,1,0,1],
+        [1,0,1,0,1,0,1,0],
+        [0,1,0,1,0,1,0,1],
+        [1,0,1,0,1,0,1,0],
+        [0,1,0,1,0,1,0,1],
+        [1,0,1,0,1,0,1,0],
+        [0,1,0,1,0,1,0,1],
+        [1,0,1,0,1,0,1,0],
+    ];
+    let o12 = document.querySelector('.o12');
+
+    for(let i = 0; i < a12.length; i++) {
+        for(let k = 0; k < a12[i].length; k++) {
+            if(a12[i][k] == 1) {
+                o12.innerHTML += a12[i][k] + ' ';
+            } else {
+                o12.innerHTML += '(^-^)';
+            }
+        }
+        o12.innerHTML += `<br>`;
+    }
+}
+
+document.querySelector('.b12').onclick = f12;
