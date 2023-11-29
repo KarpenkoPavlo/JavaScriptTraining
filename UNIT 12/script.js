@@ -72,3 +72,63 @@ document.querySelector('.bTest').onclick = () => {
     }
     document.querySelector('.oTest2').innerHTML = d;
 }
+
+//task 1
+document.querySelector('.b1').onclick = function f1() {
+    let a1 = [12, [45, 87], [55, 13]];
+    document.querySelector('.o1').innerHTML = a1[2][0];
+    return a1[2][0];
+}
+
+//task 2
+function f2() {
+    let a2 = [[12, 'hi'], [45, 87], [55, 13]];
+    document.querySelector('.o2').innerHTML = a2[0][1];
+    return a2[0][1];
+}
+
+document.querySelector('.b2').onclick = f2;
+
+//task 3
+function f3() {
+    let a3 = [[1, 2, 3], [3, 4, 5], [6, [7, 'my']]];
+    document.querySelector('.o3').innerHTML = a3[2][1][1];
+    return a3[2][1][1];
+}
+
+document.querySelector('.b3').onclick = f3;
+
+//task 4
+function f4() {
+    let a4 = [[1, 2, 3], 'go', [3, 4, 5], [6, [7, 'my']]];
+    document.querySelector('.o4').innerHTML = a4[1];
+    return a4[1];
+}
+
+document.querySelector('.b4').onclick = f4;
+
+//task 5
+function f5() {
+    let out = '';
+    let a5 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
+    for (let i = 0; i < a5.length; i++) {
+        if (a5[i][0] % 2 == 0) out += a5[i][0] + ' ';
+        if (a5[i][1] % 2 == 0) out += a5[i][1] + ' ';
+    }
+    document.querySelector('.o5').innerHTML = out;
+}
+
+document.querySelector('.b5').onclick = f5;
+
+//task 6
+function f6() {
+    let out = '';
+    let a6 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
+    for(let i = 0; i < a6.length; i++) {
+        if(a6[i][0] % 2 !== 0) out += a6[i][0] + ' ';
+        if(a6[i][1] % 2 !== 0) out += a6[i][1] + ' ';
+    }
+    document.querySelector('.o6').innerHTML = out;
+}
+
+document.querySelector('.b6').onclick = f6;
