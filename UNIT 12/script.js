@@ -278,3 +278,137 @@ function f12() {
 }
 
 document.querySelector('.b12').onclick = f12;
+
+//task 13
+let a13 = [];
+
+function f13() {
+    for(let i = 0; i < 8; i++) {
+        let row = [];
+        for(let k = 0; k < 8; k++) {
+            row.push((i + k) % 2);
+        }
+        a13.push(row);
+    }
+    console.log(a13);
+}
+
+document.querySelector('.b13').onclick = f13;
+
+//task 14
+let a14 = [
+    [],
+    [1,0],
+    [1,0,0,0],
+    [3,4,5,6,7,8],
+    [1,2]
+];
+
+function f14() {
+    for(let i = 0; i < a14.length; i++) {
+        document.querySelector('.o14').innerHTML += a14[i].length + ' ';
+    }
+
+}
+
+document.querySelector('.b14').onclick = f14;
+
+//task 15
+let a15 = [
+    [],
+    [1,0],
+    [1,0,0,0],
+    [3,4,5,6,7,8],
+    [1,2]
+];
+let lenArray = 0;
+
+function f15() {
+    for(let i = 0; i < a15.length; i++) {
+        if(a15[i].length > lenArray) {
+            lenArray = a15[i].length;
+        }
+    }
+    document.querySelector('.o15').innerHTML = lenArray;
+}
+
+document.querySelector('.b15').onclick = f15;
+
+//task 16
+let a16 = [
+    [0,7,0,6],
+    0,
+    0,
+    8
+];
+
+console.group('Task 16 ================');
+console.log(a16[3] == 8);
+console.log(a16[0][1] == 7);
+console.log(a16[0][3] == 6);
+
+console.groupEnd();
+
+//task 17
+let a17 = [
+    [0,0,6],
+    [0,7],
+    [0],
+    [0,0,8]
+];
+
+console.group('Task 17 ================');
+
+console.log(a17[3][2] == 8);
+console.log(a17[1][1] == 7);
+console.log(a17[0][2] == 6);
+
+console.groupEnd();
+
+//task 18
+let a18 = [
+    [3],
+    [0],
+    [0,12],
+    [0],
+    [8]
+];
+
+console.group('Task 18 ================');
+
+console.log(a18[0] == 3);
+console.log(a18[4][0] == 8);
+console.log(a18[2][1] == 12);
+
+console.groupEnd();
+
+//task 19
+let a19 = [
+    [[0,3]],
+    [[0,0,8]],
+    [0,[12]]
+];
+
+console.group('Task 19 ================');
+
+console.log(a19[0][0][1] == 3);
+console.log(a19[1][0][2] == 8);
+console.log(a19[2][1][0] == 12);
+
+console.groupEnd();
+
+//task 20
+let a20 = [
+    [0],
+    [0,[0,9]],
+    [0,0,18],
+    [12]
+];
+
+console.group('Task 20 ================');
+
+console.log(a20[1][1][1] == 9);
+console.log(a20[2][2] == 18);
+console.log(a20[3]== 12);
+
+console.groupEnd();
