@@ -291,10 +291,140 @@ function f15() {
     let out = '';
     for(key in a15) {
         for(val in a15[key]) {
-            out += a15[val] + ' ' + `<br>`;
+            out += a15[key][val] + ' ';
         }
+        out += `<br>`;
     }
     document.querySelector('.o15').innerHTML = out;
 }
 
 document.querySelector('.b15').onclick = f15;
+
+//task 16
+let a16 = {
+    "iis8sj": {
+        "name": "Ivan",
+        "age": 27,
+    },
+    "iiss7j": {
+        "name": "Petr",
+        "age": 26,
+    },
+    "s3s8sj": {
+        "name": "Serg",
+        "age": 47,
+    },
+}
+
+function f16() {
+    let out = '';
+    for(key in a16) {
+        for(elem in a16[key]) {
+            if(elem == "name") {
+                out += elem + ': ' + a16[key][elem];
+            }
+        }
+        out += `<br>`;
+    }   
+    document.querySelector('.o16').innerHTML = out;
+}
+
+document.querySelector('.b16').onclick = f16;
+
+//task 17
+let a17 = {
+    "iis8sj": {
+        "name": "Ivan",
+        "age": 27,
+    },
+    "iiss7j": {
+        "name": "Petr",
+        "age": 26,
+    },
+    "s3s8sj": {
+        "name": "Serg",
+        "age": 47,
+    },
+}
+
+function f17() {
+    let out = '';
+    for(key in a17) {
+        for(elem in a17[key]) {
+            if(a17[key][elem] > 30) {
+                out += elem + ': ' + a17[key][elem];
+            }
+        }
+    }
+    document.querySelector('.o17').innerHTML = out;
+}
+
+document.querySelector('.b17').onclick = f17;
+
+//task 18
+let a18 = {
+    "red": ['Akademmistechko', 'Nyvky', 'Universytet', 'Lisova'],
+    "blue": ['Minska', 'Obolon', 'Pochaina', 'Holosiivska'],
+    "green": ['Syrets', 'Zoloti Vorota', 'Klovska', 'Vidubichi']
+}
+
+function f18() {
+    let i18 = document.querySelector('.i18').value;
+    let out = '';
+
+    for(key in a18) {
+        for(elem in a18[key]) {
+            if(key == i18) {
+                out += a18[key][elem] + ', ';
+            }
+        }
+    }
+    document.querySelector('.o18').innerHTML = out;
+}
+
+document.querySelector('.b18').onclick = f18;
+
+//task 19
+let a19 = {
+    "red": ['Akademmistechko', 'Nyvky', 'Universytet', 'Lisova'],
+    "blue": ['Minska', 'Obolon', 'Pochaina', 'Holosiivska'],
+    "green": ['Syrets', 'Zoloti Vorota', 'Klovska', 'Vidubichi']
+}
+
+function f19() {
+    let i19 = document.querySelector('.i19').value.toLowerCase();
+    let out = '';
+
+    for(key in a19) {
+        for(elem in a19[key]) {
+            if(a19[key][elem].toLowerCase() == i19) {
+                out += key + ' ';
+            }
+        }
+    }
+    document.querySelector('.o19').innerHTML = out;
+}
+
+document.querySelector('.b19').onclick = f19;
+
+//task 20
+let a20 = {
+    "red": [['Akademmistechko', 1], ['Nyvky', 0], ['Universytet', 3], ['Lisova', 1]],
+    "blue": [['Minska', 1], ['Obolon', 0], ['Pochaina', 2], ['Holosiivska', 0]],
+    "green": [['Syrets', 1], ['Zoloti Vorota', 2], ['Klovska', 0], ['Vidubichi', 1]],
+}
+
+function f20() {
+    let out = '';
+
+    for(key in a20) {
+        for(elem in a20[key]) {
+            if(a20[key][elem][1] === 2) {
+                out += a20[key][elem][0] + ', ';
+            }
+        }
+    }
+    document.querySelector('.o20').innerHTML = out;
+}
+
+document.querySelector('.b20').onclick = f20;
