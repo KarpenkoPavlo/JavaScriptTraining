@@ -5,34 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/UNIT 14/style.css">
     <link rel="icon" href="/UNIT 14/img/favicon.ico">
-    <title>UNIT 14 - Weather Forecast</title>
+    <title>Weather Forecast</title>
 </head>
 <body>
-    
     <div class="wrapper">
-        <div class="weatherBlock">
-            <div class="nameCountry">
-                Kiev
-            </div>
-    
-            <div class="temp">
-                10
-            </div>
-    
-            <div class="disclaimer">
-                Clouds
-            </div>
-    
-            <div class="features">
-                Feature 1
-            </div>
-    
-            <div class="divButtonGo">
-                <button class="bGo">Go</button>
+
+        <div class="find">
+            <input type="text" class="i1Country" placeholder="Enter coutry:">
+            <select class="selectUK">
+                <option value="Kyiv">Kyiv</option>
+                <option value="Odessa">Odessa </option>
+                <option value="Dnipro">Dnipro</option>
+                <option value="Lviv">Lviv</option>
+                <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+                <option value="Chernihiv">Chernihi </option>
+                <option value="Kharkiv">Kharkiv</option>
+                <option value="Zhytomyr">Zhytomyr</option>
+                <option value="Poltava">Poltava</option>
+                <option value="Kherson">Kherson</option>
+                <option value="Zaporizhzhia">Zaporizhzhia</option>
+                <option value="Luhansk">Luhansk</option>
+                <option value="Donetsk">Donetsk</option>
+                <option value="Vinnytsia">Vinnytsia</option>
+                <option value="Mykolaiv">Mykolaiv</option>
+                <option value="Kirovohrad">Kirovohrad</option>
+                <option value="Sumy">Sumy</option>
+                <option value="Cherkasy">Cherkasy</option>
+                <option value="Khmelnytskyi">Khmelnytskyi</option>
+                <option value="Volyn">Volyn</option>
+                <option value="Rivne">Rivne</option>
+                <option value="Ternopil">Ternopil</option>
+                <option value="Zakarpattia">Zakarpattia</option>
+                <option value="Chernivtsi">Chernivtsi</option>
+            </select>
+        </div>
+
+        <div class="info">
+            <h1 class="name">Country / City</h1>
+            <div class="tempCloud">
+                <h1 class="temp">0&deg;</h1>
+                <h1 class="cloud">Cloud</h1>
             </div>
         </div>
-    </div>
 
+        <nav class="list">
+            <ul class="items">
+                <li class="item1">Max:</li>
+                <li class="item2">Min:</li>
+                <li class="item3">Speed:</li>
+                <li class="item4">Gust:</li>
+                <li class="item5">Country:</li>
+            </ul>
+        </nav>
+
+        <div class="divButton">
+            <button class="bGo">Go</button>
+        </div>
+
+    </div>
     <script src="/UNIT 14/script.js"></script>
 </body>
 </html>
