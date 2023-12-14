@@ -81,3 +81,66 @@ const f5 = () => {
 }
 
 document.querySelector('.b5').onclick = f5;
+
+//task 6
+const f6 = () => {
+    let a6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]; 
+    let s6 = new Set(a6);
+    let as6 = Array.from(s6);
+    document.querySelector('.o6').innerHTML = as6;
+}
+
+document.querySelector('.b6').onclick = f6;
+
+//task 7
+const f7 = () => {
+    let i7 = document.querySelector('.i7').value;
+    let s7 = new Set(i7);
+    let o7 = document.querySelector('.o7');
+    
+    if(s7.size >= 6) {
+        o7.innerHTML = 1;
+    } else {
+        o7.innerHTML = 0;
+    }
+}
+
+document.querySelector('.b7').onclick = f7;
+
+//task 8
+let s8 = new Set([1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]);
+let ar8 = [];
+
+const f8 = () => {
+    for(i of s8) {
+        if(i > 5) {
+            ar8.push(i);
+        }
+    }
+
+    console.log(ar8);
+}
+
+document.querySelector('.b8').onclick = f8;
+
+//task 9
+const f9 = our_set => {
+    let a9 = Array.from(our_set);
+    return a9.join(' ');
+}
+
+document.querySelector('.b9').onclick = () => {
+    let s9 = new Set([9, 8, 7, 6, 5]);
+    document.querySelector('.o9').innerHTML = f9(s9);
+}
+
+//task 10
+const f10 = (out_set, elem) => {
+    let as10 = Array.from(out_set);
+    document.querySelector(elem).innerHTML = as10.join(' ');
+}
+
+document.querySelector('.b10').onclick = () => {
+    let a10 = new Set(['4', '5', '6']);
+    f10(a10, '.o10');
+};
