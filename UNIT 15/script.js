@@ -144,3 +144,59 @@ document.querySelector('.b10').onclick = () => {
     let a10 = new Set(['4', '5', '6']);
     f10(a10, '.o10');
 };
+
+//task 11
+const f11 = () => {
+    let s = new Set();
+    s.add([1]);
+    s.add([1]);
+    console.log(s);
+}
+
+document.querySelector('.b11').onclick = f11;
+
+// Ми змогли додати дві одиниці в Set тому що
+// ці одиниця є масивами, а Set визнає унікальність
+// лише для примітивних типів даних
+
+//task 12
+let str12 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
+
+const f12 = () => {
+    let a12 = str12.split('');
+    let s12 = new Set();
+    
+    for(i of a12) {
+        s12.add(i);
+    }
+    return s12;
+}
+
+document.querySelector('.b12').onclick = () => {
+    console.log(f12());
+}
+
+//task 13-
+let str13 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
+
+
+const f13 = () => {
+    let a13 = str13.split('');
+    let s13 = new Set();
+
+    for(i of a13) {
+        s13.add(i);
+    }
+
+    let o13;
+    for(y of s13) {
+        
+    }
+
+    return s13;
+    // return
+}
+
+document.querySelector('.b13').onclick = () => {
+    console.log(f13());
+}
