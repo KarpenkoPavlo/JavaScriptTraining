@@ -98,7 +98,7 @@ const f7 = () => {
     let s7 = new Set(i7);
     let o7 = document.querySelector('.o7');
     
-    if(s7.size >= 6) {
+    if( i7.length >= 6 && i7.length === s7.size) {
         o7.innerHTML = 1;
     } else {
         o7.innerHTML = 0;
@@ -182,19 +182,16 @@ let str13 = 'The name conjures up visions of plum pudding and Christmas punch qu
 
 const f13 = () => {
     let a13 = str13.split('');
-    let s13 = new Set();
+    let s13 = new Set(a13);
 
-    for(i of a13) {
-        s13.add(i);
+    let result = {};
+
+    for (i of s13) {
+        let count = a13.filter(c => c === i).length;
+        result[i] = count;
     }
 
-    let o13;
-    for(y of s13) {
-        
-    }
-
-    return s13;
-    // return
+    return result;
 }
 
 document.querySelector('.b13').onclick = () => {
