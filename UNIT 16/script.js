@@ -57,21 +57,49 @@ document.querySelector('.b5').addEventListener('click', ()=> {
     document.querySelector('.o5').innerHTML = f5();
 });
 
-//task 6-
+//task 6
 let a6 = [[1,2], [3,4], [5,6]];
 
 function f6() {
-    console.log(a6);
-    let a6In = [];
-    for( let key in a6) {
-        a6In.push(a6[key]);
+    let a6Copy = [];
+    for(item of a6) {
+        for(item2 of item)
+        a6Copy.push(item2);
     }
-    delete a6;
-    for( let key in a6In) {
-        a6.push(a6In[key]);
-    }
-    document.querySelector('.o6').textContent = a6;
-    console.log(a6);
+    a6 = a6Copy;
+    document.querySelector('.o6').textContent = a6.join(' ');
 }
 
 document.querySelector('.b6').addEventListener('click', f6);
+
+//task 7
+let a7 = [{ id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
+
+function f7() {
+    let a7Object = {}; // Створюю новий об'ект
+    for(key of a7) { // Перебираю значення в масиві
+        a7Object[key.id] = key.name; // Присвоюю замість значення id значення name
+    }
+    return a7Object; // Повертаю новий об'ект
+}
+
+document.querySelector('.b7').addEventListener('click', ()=>{
+    console.log(f7());
+});
+
+//task 8
+let a8 = [ { id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
+
+function f8() {
+    let a8Copy = []; // Створюю новий масив
+    for(key of a8) { // Перебираю значення в масиві а8
+        if(typeof key.id === 'number') { // Якщо тип значення id суворо 'число'
+            a8Copy.push(key.id); // Додаю в новий масив лише значення id
+        }
+    }
+    return a8Copy; // Повертаю новий масив
+}
+
+document.querySelector('.b8').addEventListener('click', ()=>{
+    console.log(f8());
+})
