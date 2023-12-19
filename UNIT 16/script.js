@@ -103,3 +103,100 @@ function f8() {
 document.querySelector('.b8').addEventListener('click', ()=>{
     console.log(f8());
 })
+
+//task 9
+let a9 = [ [4,3,2], [2,5], [0,0,0,0,0]];
+
+function f9() {
+    let maxSumIndex = 0;
+    for(key of a9) {
+        if(maxSumIndex < key.length - 1) {
+            maxSumIndex = key.length - 1;
+        }
+    }
+    return maxSumIndex;
+}
+
+document.querySelector('.b9').addEventListener('click', ()=>{
+    document.querySelector('.o9').innerHTML = f9();
+})
+
+//task 10
+let a10 = [4, 6, 9, 'Hello'];
+
+function f10() {
+    let a10Object = {};
+    for(item of a10) {
+        a10Object[item] = item;
+    }
+    return a10Object;
+}
+
+document.querySelector('.b10').addEventListener('click', ()=>{
+    console.log(f10());
+})
+
+//task 11
+let a11 = {
+    one : 11,
+    two : 7,
+    three: 13,
+    four: 0
+}
+
+function f11() {
+    let o11 = document.querySelector('.o11');
+    for(key in a11) {
+        if(a11[key] > 10) {
+            o11.innerHTML += a11[key] + ' ';
+        }
+    }
+}
+
+document.querySelector('.b11').addEventListener('click', f11);
+
+//task 12
+let a12 = [4,5,6,7];
+
+function f12() {
+    let o12 = document.querySelector('.o12');
+    for(item of a12) {
+        o12.innerHTML += item + ' ';
+    }
+}
+
+document.querySelector('.b12').addEventListener('click', f12);
+
+//task 13
+let a13 = 'testone';
+
+function f13() {
+    let o13 = document.querySelector('.o13');
+    for(item of a13.split('')) {
+        o13.innerHTML += item + ' ';
+    }
+}
+
+document.querySelector('.b13').addEventListener('click', f13);
+
+//task 14
+let a14 = new Set([4,5,6]);
+
+function f14() {
+    let o14 = document.querySelector('.o14');
+    for(item of a14) {
+        o14.innerHTML += item + ' ';
+    }
+}
+
+document.querySelector('.b14').addEventListener('click', f14);
+
+//task 15
+function f15() {
+    let o15 = document.querySelectorAll('.o15');
+    for(item of o15) {
+        item.textContent = 3;
+    }
+}
+
+document.querySelector('.b15').addEventListener('click', f15);
