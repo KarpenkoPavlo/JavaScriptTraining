@@ -83,3 +83,84 @@ function f5() {
 document.querySelector('.b5').addEventListener('click', () => {
     console.log(f5());
 })
+
+//task 6
+b6 = [3, 14, 15, 92, "6", "5", "hello", 32]
+
+function f6() {
+    b6.filter(function(item) {
+        if(typeof item === 'number') {
+            return b6_res.push(item);
+        }
+    })
+    return b6_res;
+}
+
+document.querySelector('.b6').onclick = () => {
+    console.log(f6());
+}
+
+//task 7
+b7 = ["php-7", "html", "css", 92, "6", "5", "hello", 32]
+
+function f7() {
+    b7.filter(function(item) {
+        if(typeof item === 'string' && item.length > 3) {
+            return b7_res.push(item);
+        }
+    })
+    return b7_res;
+}
+
+document.querySelector('.b7').addEventListener('click', () => {
+    console.log(f7());
+})
+
+//task 8
+b8 = [3, 14, 15, 92, "6", "5", "hello", 32];
+
+function f8() {
+    b8.filter(function(item, index) {
+        if(item % 2 === 0) {
+            return b8_res.push(index);
+        }
+    })
+    return b8_res;
+}
+
+document.querySelector('.b8').onclick = () => {
+    console.log(f8());
+}
+
+//task 9
+b9 = [3, "hello", 4, "world", 5, "hi"];
+
+function f9() {
+    b9.filter(function(item) {
+        if(typeof item === 'number') {
+            return b9_num.push(item);
+        } else if(typeof item === 'string') {
+            return b9_string.push(item);
+        }
+    })
+    // return b9_num;
+    // return b9_string;
+}
+
+document.querySelector('.b9').addEventListener('click', () => {
+    console.log(f9());
+})
+
+//task 10
+let b10 = [ [1,2,3], [3,4,6], [4,5,7], [8,9,3]];
+
+function t10() {
+    b10_res = b10.filter(function(item) {
+        return item.includes(3);
+    });
+    return b10_res;
+}
+
+document.querySelector('.b10').onclick = () => {
+    console.log(t10());
+}
