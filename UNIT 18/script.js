@@ -55,3 +55,38 @@ function f4() {
 }
 
 document.querySelector('.b4').onclick = f4;
+
+//task 5
+function f5() {
+    // Отримуємо значення атрибуту data поточного елемента (this вказує на поточний елемент, на який відбулася подія)
+    let dataValue = this.getAttribute('data');
+    // Додаємо значення до масиву a5_res
+    a5_res.push(dataValue);
+    // Виводимо масив a5_res у консоль для перевірки
+    console.log(a5_res);
+}
+
+// Додаємо обробник подій для кожного елемента
+document.querySelectorAll('.p5').forEach(elem => {
+    elem.onclick = f5;
+})
+
+//task 6
+function f6() {
+    let str6 = 'helloworld';
+    a6_res = str6.split('');
+    document.querySelector('.o6').innerHTML = a6_res;
+}
+
+document.querySelector('.b6').onclick = f6;
+
+//task 7-
+function f7() {
+    let str7="hello world hi mazai";
+    a7_res.push(str7.split(''));
+    document.querySelector('.o7').innerHTML = a7_res;
+}
+
+document.querySelector('.b7').addEventListener('click', () => {
+    console.log(f7());
+})
