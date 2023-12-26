@@ -80,13 +80,48 @@ function f6() {
 
 document.querySelector('.b6').onclick = f6;
 
-//task 7-
+//task 7
 function f7() {
     let str7="hello world hi mazai";
-    a7_res.push(str7.split(''));
+    a7_res = str7.split(' ');
     document.querySelector('.o7').innerHTML = a7_res;
 }
 
 document.querySelector('.b7').addEventListener('click', () => {
     console.log(f7());
+})
+
+//task 8
+a8 = [1,2,66,77,15];
+
+function f8() {
+    a8_res = a8.join('-');
+    document.querySelector('.o8').innerHTML = a8_res;
+}
+
+document.querySelector('.b8').addEventListener('click', () => {
+    console.log(f8());
+})
+
+//task 9
+a9 = [['hi', 'mahai'], ['test', 'best']];
+
+function f9() {
+    a9.forEach(function(item) {
+        a9_res += item.join('-') + '-';
+    })
+    document.querySelector('.o9').textContent = a9_res;
+}
+
+document.querySelector('.b9').onclick = f9;
+
+//task 10-
+a10 = {name: ivan, age: 15, sex: 1, id: 45};
+
+function f10() {
+
+}
+
+document.querySelector('.b10').addEventListener('click', () => {
+    console.log(f10());
 })
