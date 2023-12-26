@@ -116,10 +116,12 @@ function f9() {
 document.querySelector('.b9').onclick = f9;
 
 //task 10-
-a10 = {name: ivan, age: 15, sex: 1, id: 45};
+a10 = {name: 'ivan', age: 15, sex: 1, id: 45};
 
 function f10() {
-
+    // Object.keys(a10) повертає масив ключів об'єкта a10
+    a10_res = Object.keys(a10).map(key => `${key}=${a10[key]}`).join('&');
+    document.querySelector('.o10').innerHTML = a10_res;
 }
 
 document.querySelector('.b10').addEventListener('click', () => {
