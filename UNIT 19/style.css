@@ -1,0 +1,9 @@
+.block {
+    display: grid;
+    place-content: center;
+    width: 75px;
+    height: 75px;
+    margin: 25px;
+    border: 2px solid #180add;
+    background-color: rgb(25, 164, 229);
+}
