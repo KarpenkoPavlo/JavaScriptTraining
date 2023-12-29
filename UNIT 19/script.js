@@ -32,3 +32,63 @@ function f3() {
 }
 
 document.querySelector('.d3').addEventListener('click', f3);
+
+//task 4
+function f4() {
+    let d4 = document.querySelector('.d4').textContent;
+    document.querySelector('.o4').textContent = d4;
+}
+
+document.querySelector('.d4').ondblclick = f4;
+
+//task 5
+function f5() {
+    let d5 = document.querySelector('.d5');
+    // Перевіряю на наявність класу active в d5
+    if(d5.classList.contains('active')) {
+        d5.classList.remove('active');
+    } else {
+        d5.classList.add('active');
+    }
+}
+
+document.querySelector('.d5').ondblclick = f5;
+
+//task 6
+function f6() {
+    let u6 = document.querySelector('.u6');
+    if(u6.classList.contains('hide')) {
+        u6.classList.remove('hide');
+    } else {
+        u6.classList.add('hide');
+    }
+}
+
+document.querySelector('.d6').ondblclick = f6;
+
+//task 7
+function f7(event) {
+    event.preventDefault();
+    let d7 = document.querySelector('.d7');
+    d7.classList.toggle('active');
+}
+
+document.querySelector('.d7').oncontextmenu = f7;
+
+//task 8
+function f8(event) {
+    let ch8 = document.querySelector('.ch8');
+    // Якщо ch8 активовано то припираємо клік на ПКМ
+    if(ch8.checked) {
+        event.preventDefault();
+    }
+}
+
+document.querySelector('.ch8').onchange = function () {
+    // Додаємо та видаляємо клік на ПКМ
+    if(this.checked) {
+        document.addEventListener('contextmenu', f8);
+    } else {
+        document.removeEventListener('contextmenu', f8);
+    }
+};
