@@ -92,3 +92,46 @@ document.querySelector('.ch8').onchange = function () {
         document.removeEventListener('contextmenu', f8);
     }
 };
+
+//task 9
+function f9(event) {
+    event.preventDefault();
+    let d9 = document.querySelector('.d9');
+    let d9img = d9.querySelector('img');
+    if (d9img.src = ('/UNIT 19/img/1.png')) {
+        d9img.src = '/UNIT 19/img/2.png';
+    }
+}
+
+document.querySelector('.d9').oncontextmenu = f9;
+
+//task 10
+function f10() {
+    let d10 = document.querySelector('.d10');
+    let d10img = d10.querySelector('img');
+    if(d10img.src = ('/UNIT 19/img/1.png')) {
+        d10img.src = '/UNIT 19/img/2.png';
+    }
+}
+
+document.querySelector('.d10').addEventListener('mouseenter', f10);
+
+//task 11
+function f11() {
+    // Отримуємо блок
+    let d11 = document.querySelector('.d11');
+    // Отримуємо елемент img блока
+    let d11img = d11.querySelector('img');
+    
+    // Навішуємо подію ,вхід миші, на елемент блока
+    d11img.addEventListener('mouseenter', () => {
+        d11img.src = ('/UNIT 19/img/2.png');
+    })
+
+    // Навішуємо подію ,вихід миші, на елемент блока
+    d11img.addEventListener('mouseleave', () => {
+        d11img.src = ('/UNIT 19/img/1.png');
+    })
+}
+
+document.querySelector('.d11').addEventListener('mouseenter', f11);
