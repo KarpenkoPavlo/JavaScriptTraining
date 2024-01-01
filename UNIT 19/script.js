@@ -135,3 +135,104 @@ function f11() {
 }
 
 document.querySelector('.d11').addEventListener('mouseenter', f11);
+
+//task 12
+function f12() {
+    // Додаю клас
+    document.querySelector('.d12').classList.add('active');
+}
+// При події ,мишка натиснута, ( просто натиснута,не відпускаючи )
+document.querySelector('.d12').addEventListener('mousedown', f12);
+
+//task 13
+function f13() {
+
+    let d13 = document.querySelector('.d13');
+    // Додаю клас
+    d13.classList.add('active');
+    // Видаляю класс при події ,мишка відпущенна,
+    d13.addEventListener('mouseup', () => {
+        d13.classList.remove('active');
+    })
+}
+// Запускаю ф-ю при події ,мишка натиснута,
+document.querySelector('.d13').addEventListener('mousedown', f13);
+
+//task 14
+function f14() {
+    let d14 = document.querySelector('.d14');
+    d14.onclick = () => {
+        d14.classList.add('active');
+    }
+}
+
+document.querySelector('.b14').onclick = f14;
+
+//task 15 
+// Рахуємо в блоці кількість рухів мишкою
+let n = 0;
+
+function f15() {
+    let d15 = document.querySelector('.d15');
+    d15.textContent = n++;
+}
+
+document.querySelector('.d15').addEventListener('mousemove', f15);
+
+//task 16
+// Додаємо при кожному русі в блокі +1 до його довжини
+let w16 = 75;
+
+function f16() {
+    document.querySelector('.d16').style.width = w16 + 'px';
+    w16++;
+}
+
+document.querySelector('.d16').addEventListener('mousemove', f16);
+
+//task 17
+// Вмикаємо подію в task 16
+function f17on() {
+    let d16 = document.querySelector('.d16');
+    d16.addEventListener('mousemove', f16);
+}
+
+// Вимикаємо подію в task 16
+function f17off () {
+    let d16 = document.querySelector('.d16');
+    d16.removeEventListener('mousemove', f16);
+}
+
+document.querySelector('.b17on').onclick = f17on;
+document.querySelector('.b17off').onclick = f17off;
+
+//task 18
+// Виводимо в блоці його довжину
+function f18() {
+    let d18 = document.querySelector('.d18');
+    d18.textContent = 'width: ' + d18.offsetWidth;
+}
+
+document.querySelector('.d18').addEventListener('mouseenter', f18);
+
+//task 19
+// Виводимо в блоці його класи
+function f19() {
+    let d19 = document.querySelector('.d19');
+    d19class = d19.classList;
+    d19.textContent = d19class;
+}
+
+document.querySelector('.d19').addEventListener('mouseout', f19);
+
+//task 20
+// При русі в progress додаємо +1 до його value
+let v = 0;
+
+function f20() {
+    document.querySelector('progress').value = v;
+    v++;
+
+}
+
+document.querySelector('progress').addEventListener('mousemove', f20);
