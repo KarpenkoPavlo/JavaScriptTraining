@@ -35,3 +35,36 @@ function f3(event) {
 }
 
 document.querySelector('.i3').onkeypress = f3;
+
+//task 4
+function f4(event) {
+    let o4 = document.querySelector('.o4');
+    console.log(event);
+    if(event.key.toUpperCase()) {
+        o4.innerHTML += event.key.toLowerCase();
+    }
+}
+
+document.querySelector('.i4').onkeypress = f4;
+
+//task 5
+function f5(event) {
+    let o5 = document.querySelector('.o5');
+    console.log(event);
+    if(event.key.toLowerCase()) {
+        o5.innerHTML += event.key.toUpperCase();
+    }
+}
+
+document.querySelector('.i5').onkeypress = f5;
+
+//task 6-
+function f6(event) {
+    let i6 = document.querySelector('.i6');
+    console.log(event);
+    if(event.key === event.key.toLowerCase()) {
+        i6.value;
+    }
+}
+
+document.querySelector('.i6').onkeypress = f6;
