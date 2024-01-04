@@ -58,13 +58,45 @@ function f5(event) {
 
 document.querySelector('.i5').onkeypress = f5;
 
-//task 6-
+//task 6
 function f6(event) {
     let i6 = document.querySelector('.i6');
-    console.log(event);
+
+    // Якщо в літери малі то пишемо їх
     if(event.key === event.key.toLowerCase()) {
-        i6.value;
+        i6.value += event.key;
+    // Якщо літери великі то відміняємо подію
+    } else if(event.key === event.key.toUpperCase()) {
+        event.preventDefault();
     }
+    // Відмяняємо подію повторного написання малих літер
+    event.preventDefault();
 }
 
 document.querySelector('.i6').onkeypress = f6;
+
+//task 7
+function f7() {
+    const a7 = [1, 'one', 2, 'two'];
+    // Генерує випадковий індекс масиву в межах його довжини, 
+    // дозволяючи потім обирати випадковий елемент масиву
+    let randomElem = Math.floor(Math.random() * a7.length);
+    document.querySelector('.o7').innerHTML = a7[randomElem];
+}
+
+document.querySelector('.i7').onkeypress = f7;
+
+//task 8-
+function f8(event) {
+    let o8 = document.querySelector('.o8');
+
+    if(event.code === 'KeyI') {
+        o8.innerHTML += 1;
+    } else if(event.code === 'KeyO') {
+        o8.innerHTML += 0;
+    } else if(event.code === 'KeyL') {
+        o8.innerHTML += 7;
+    }
+}
+
+document.querySelector('.i8').onkeypress = f8;
