@@ -86,17 +86,58 @@ function f7() {
 
 document.querySelector('.i7').onkeypress = f7;
 
-//task 8-
+//task 8
 function f8(event) {
     let o8 = document.querySelector('.o8');
 
-    if(event.code === 'KeyI') {
-        o8.innerHTML += 1;
-    } else if(event.code === 'KeyO') {
-        o8.innerHTML += 0;
-    } else if(event.code === 'KeyL') {
-        o8.innerHTML += 7;
+    const a8 = {
+        'i' : 1,
+        'o' : 0,
+        'l' : 7,
+    }
+    // Якщо натиснута кнопка знаходиться в масиві 
+    if(a8[event.key] !== undefined) {
+    // то записуємо її в о8
+        o8.innerHTML += a8[event.key];
+    } else {
+        event.preventDefault();
     }
 }
 
 document.querySelector('.i8').onkeypress = f8;
+
+//task 9
+let s = 0;
+
+function f9(event) {
+    let o9 = document.querySelector('.o9')
+
+    if(event.key === 'ArrowDown') {
+        s = s + 1;
+        o9.innerHTML = 'Кнопка "ArrowDown" була натиснута: ' + s + ' раз'; 
+    } else {
+        event.preventDefault();
+    }
+}
+
+document.querySelector('.i9').onkeydown = f9;
+
+//task 10
+let w10 = 64;
+let h10 = 64;
+
+function f10(event) {
+    let img10 = document.querySelector('.img10');
+    
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        w10++;
+        img10.style.width = w10 + 'px';
+    } else if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+        h10++;
+        img10.style.height = h10 + 'px';
+    } else {
+        event.preventDefault();
+    }
+}
+
+document.querySelector('.i10').onkeydown = f10;
