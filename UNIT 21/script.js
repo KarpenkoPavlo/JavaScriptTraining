@@ -48,3 +48,28 @@ function f3(event) {
         o3.innerHTML = 2;
     }
 }
+
+//task 4
+function f4() {
+    document.querySelector('.d4').addEventListener('touchstart', handleTouchStart);
+}
+
+function handleTouchStart() {
+    document.querySelector('.o4').textContent += 'touch-';
+}
+
+document.querySelector('.b4').addEventListener('click', f4);
+
+//task 5
+function f5() {
+    document.querySelector('.d4').removeEventListener('touchstart', handleTouchStart);
+}
+
+document.querySelector('.b5').addEventListener('click', f5);
+
+//task 6
+function f6() {
+    document.querySelector('.o6').textContent += 'touchend-';
+}
+
+document.querySelector('.d4').addEventListener('touchend', f6);
