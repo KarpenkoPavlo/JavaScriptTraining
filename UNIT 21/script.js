@@ -73,3 +73,35 @@ function f6() {
 }
 
 document.querySelector('.d4').addEventListener('touchend', f6);
+
+//task 7
+function f7() {
+    document.querySelector('.d7').style.backgroundColor = "red";
+}
+
+document.querySelector(".d7").addEventListener("touchstart", function() {
+    f7();
+})
+
+//task 8
+function f8() {
+    let a8 = ['red', 'green', 'blue', 'orange', 'pink', 'yellow'];
+
+    // а8[округлюємо(обираємо рандомне число з + довжини масиву)]
+    let randomColor = a8[Math.floor(Math.random() * a8.length)];
+    
+    document.querySelector('.d8').style.backgroundColor = randomColor;
+}
+
+document.querySelector('.d8').addEventListener('touchstart', () => {
+    f8();
+})
+
+//task 9
+function f9(event) {
+    document.querySelector('.o9').innerHTML = "Кількісьб одночастних доторків: " + event.touches.length;
+}
+
+document.querySelector('.d9').addEventListener('touchstart', () => {
+    f9(event);
+})
