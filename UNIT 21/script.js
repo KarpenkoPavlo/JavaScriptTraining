@@ -99,9 +99,37 @@ document.querySelector('.d8').addEventListener('touchstart', () => {
 
 //task 9
 function f9(event) {
-    document.querySelector('.o9').innerHTML = "Кількісьб одночастних доторків: " + event.touches.length;
+    document.querySelector('.o9').innerHTML = "Кількість одночастних доторків: " + event.touches.length;
 }
 
 document.querySelector('.d9').addEventListener('touchstart', () => {
     f9(event);
 })
+
+//task 10
+function f10() {
+    // обьект
+    let d10 = document.querySelector('.d10');
+    // поточна ширина обьекта
+    let curentWidth = d10.offsetWidth;
+
+    // ширина обьекта = (поточна ширина + 1) + 'рх'
+    d10.style.width = (curentWidth + 1) + 'px';
+}
+
+// при русі на обьекті запускається функція
+document.querySelector('.d10').addEventListener('touchmove', f10);
+
+// tasl 11
+function f11(event) {
+    let d11 = document.querySelector('.d11');
+    
+    // радіуси доторків
+    let radiusX = event.changedTouches[0].radiusX;
+    let radiusY = event.changedTouches[0].radiusY;
+
+    console.log("RadiusX: ", radiusX);
+    console.log("RadiusY: ", radiusY);
+}
+
+document.querySelector('.d11').addEventListener('touchstart', f11);
