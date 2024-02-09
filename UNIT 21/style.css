@@ -16,29 +16,33 @@ hr {
     margin: 10px;
 }
 
-.next,
-.prev {
-    box-sizing: inherit;
-    display: inline-block;
-    height: 40px;
-    margin: 0 2px 15px;
-    padding: 0 20px;
-    width: auto;
-    background: none;
-    overflow: visible;
-    appearance: none;
-    transition: all .1s ease-out;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 40px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-    border-radius: 4px;
-    border-style: solid;
-    border-width: 1px;
-    background-color: #4caf50;
-    color: #fff;
-    border-color: #4caf50;
+.container  {
+    width: 100%;
+}
+
+section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #444;
+}
+
+.active {
+    background: orange;
+}
+
+.hide {
+    display: none;
+}
+
+.img-12-min {
+    width: 64px;
+}
+
+.img-12-max {
+    width: 128px;    border: 3px solid #fff;
+
+}
+
+.active-img {
+    border: 3px solid black;
 }

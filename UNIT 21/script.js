@@ -120,7 +120,7 @@ function f10() {
 // при русі на обьекті запускається функція
 document.querySelector('.d10').addEventListener('touchmove', f10);
 
-// tasl 11
+// task 11
 function f11(event) {
     let d11 = document.querySelector('.d11');
     
@@ -133,3 +133,61 @@ function f11(event) {
 }
 
 document.querySelector('.d11').addEventListener('touchstart', f11);
+
+// task 12
+let items = document.querySelectorAll('.img-12-min');
+let currentIndex = -1;
+
+function nextFunction() {
+
+    // Находим текущий активный элемент
+    items.forEach(function(item, index) {
+      if(item.classList.contains('active-img')) {
+        currentIndex = index;
+      } 
+    });
+    
+    // Если текущий активный элемент найден
+    if(currentIndex !== -1) {
+        // Удаляем класс active-img у текущего активного элемента
+        items[currentIndex].classList.remove('active-img');
+
+        // Находим индекс следующего элемента
+        let nextIndex = currentIndex + 1;
+        if(nextIndex >= items.length) {
+            nextIndex = 0; // Если текущий элемент последний, переходим к первому
+        }
+
+        // Добавляем класс active-img к следующему элементу
+        items[nextIndex].classList.add('active-img');
+    }
+}
+
+document.querySelector('.next').addEventListener('touchstart', nextFunction);
+
+// -----------------------
+
+function prevFunction() {
+    let currentIndex = -1;
+
+    // Находим текущий активный элемент
+    items.forEach(function(item, index) {
+        if (item.classList.contains('active-img')) {
+            currentIndex = index;
+        }
+    });
+
+    // Если текущий активный элемент найден
+    if (currentIndex !== -1) {
+        // Удаляем класс active-img у текущего активного элемента
+        items[currentIndex].classList.remove('active-img');
+
+        // Находим индекс предыдущего элемента
+        let prevIndex = (currentIndex - 1 + items.length) % items.length; // Используем оператор % для обеспечения цикличности
+
+        // Добавляем класс active-img к предыдущему элементу
+        items[prevIndex].classList.add('active-img');
+    }
+}
+
+document.querySelector('.prev').addEventListener('touchstart', prevFunction);
