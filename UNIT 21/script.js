@@ -137,6 +137,7 @@ document.querySelector('.d11').addEventListener('touchstart', f11);
 // task 12
 let items = document.querySelectorAll('.img-12-min');
 let currentIndex = -1;
+let imgMax = document.querySelector('.img-12-max');
 
 function nextFunction() {
 
@@ -160,6 +161,8 @@ function nextFunction() {
 
         // Добавляем класс active-img к следующему элементу
         items[nextIndex].classList.add('active-img');
+
+        imgMax.src = items[nextIndex].src;
     }
 }
 
@@ -187,7 +190,25 @@ function prevFunction() {
 
         // Добавляем класс active-img к предыдущему элементу
         items[prevIndex].classList.add('active-img');
+
+        imgMax.src = items[prevIndex].src;
     }
 }
 
 document.querySelector('.prev').addEventListener('touchstart', prevFunction);
+
+// -----------------------
+
+function resetFunction() {
+    items.forEach(function(item,index) {
+        if(item.classList.contains('active-img')) {
+            item.classList.remove('active-img')
+        }
+    })
+
+    items[0].classList.add('active-img');
+
+    imgMax.src = items[0].src;
+}
+
+document.querySelector('.reset').addEventListener('touchstart', resetFunction);
