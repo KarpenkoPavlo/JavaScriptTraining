@@ -108,3 +108,39 @@ document.querySelector('.b4').onclick = function() {
         document.querySelector('.o4').innerHTML = xhttp4.responseText;
     }
 }
+
+//task 5
+document.querySelector('.b5').addEventListener('click', function() {
+    let xhttp5 = new XMLHttpRequest();
+
+    xhttp5.onreadystatechange = function() {
+        if(xhttp5.readyState == 4 && xhttp5.status == 200) {
+            myFunction5();
+        }
+    }
+
+    xhttp5.open("GET", "http://getpost.itgid.info/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5", true);
+    xhttp5.send();
+
+    function myFunction5() {
+        document.querySelector('.o5').innerHTML = data;
+    }
+})
+
+//task 6
+document.querySelector('.b6').addEventListener('click', function() {
+    let xhttp6 = new XMLHttpRequest();
+
+    xhttp6.onreadystatechange = function() {
+        if(xhttp6.readyState == 4 && xhttp6.status == 200) {
+            myFunction6();
+        }
+    }
+
+    xhttp6.open("GET", "http://getpost.itgid.info/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=5&num2=2", true);
+    xhttp6.send();
+
+    function myFunction6() {
+        document.querySelector('.o6').innerHTML = data;
+    }
+})
