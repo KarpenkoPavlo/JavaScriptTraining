@@ -40,20 +40,26 @@ document.querySelector('.b1').onclick = function() {
     // Встановлення обробника подій для зміни стану об'єкта XMLHttpRequest
     xhttp1.onreadystatechange = function() {
         if(xhttp1.readyState == 4 && xhttp1.status == 200) {
-            myFunction1();
+            myFunction1(this.responseText);
         }
     }
 
     // Відкриття запиту
-    xhttp1.open("GET", "http://getpost.itgid.info/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1");
+    xhttp1.open("GET", "http://getpost.itgid.info/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1", true);
     // Відправлення запиту
     xhttp1.send();
 
     // Функція, яка буде викликана при успішному отриманні відповіді від сервера
-    function myFunction1() {
-        document.querySelector('.o1').innerHTML = xhttp1.responseText;
+    function myFunction1(data) {
+        document.querySelector('.o1').innerHTML = data;
     }
+
+    fetch("http://getpost.itgid.info/index2.php")
+        .then(data => {
+            console.log(data);
+        })
 }
+
 
 //task 2
 document.querySelector('.b2').addEventListener('click', function() {
